@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+</head>
+<body>
+<h1> Hi </h1>
+<ul>
+    <li>
+        <a href="/">Main</a>
+    </li>
+    <li>
+        <a href="/products/">Products</a>
+    </li>
+    <li>
+        <a href="{% url 'myshop:about' %}">About</a>
+    </li>
+    <li>
+        {% if user.is_authenticated %}
+            <a href="{% url 'shopauth:logout' %}">
+                Logout ({{ user.username }})
+            </a>
+        {% else %}
+            <a href="{% url 'shopauth:login' %}">
+                Login
+            </a>
+        {% endif %}
+    </li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ p_title|default:"Shop" }}</title>
+</head>
+<body>
+<h1> Welcome </h1>
+<ul>
+    <li>
+        <a href="/">Main</a>
+    </li>
+    <li>
+        <a href="/products/">Products</a>
+    </li>
+</ul>
+    <a href="{% url 'myshop:product_create' %}">New ProductKind</a>
+
+<div class="products-list">
+    <ul>
+        {% for item in object_list%}
+            <li>
+                {{ item }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
