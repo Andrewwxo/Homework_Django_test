@@ -31,7 +31,7 @@ jobs:
         pip install -r requirements-dev.txt
     - name: Run pytest
       run: |
-        python manage.py test
+        python3 manage.py test
 
   deploy:
     needs: run-tests
