@@ -25,7 +25,7 @@ urlpatterns = [
 ]
 
 if DEBUG:
-    urlpatterns.append(
-        path('__debug__/', include('debug_toolbar.urls'))
-    )
+#     urlpatterns.append(
+#         path('__debug__/', include('debug_toolbar.urls'))
+#     )
     urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
