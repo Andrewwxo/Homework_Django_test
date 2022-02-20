@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'shopauth',
     'myshop',
-    'debug_toolbar',
+#     'debug_toolbar',
 ]
 
 MIDDLEWARE = [
